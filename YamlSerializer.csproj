@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>YamlSerializer</RootNamespace>
     <AssemblyName>YamlSerializer</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -31,6 +31,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,16 +112,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>cd "$(TargetDir)"
-del $(ProjectName).zip
-del $(ProjectName)Src.zip
-cd ..\..\..
-zip -9 -r -D "$(TargetDir)$(ProjectName)Src.zip" $(ProjectName) $(ProjectName)Test -x $(ProjectName)\bin\* -x $(ProjectName)\Help\* -x $(ProjectName)\obj\* -x $(ProjectName)\publish\* -x $(ProjectName)Test\bin\* -x $(ProjectName)Test\obj\* -x *.VisualState.xml
-cd "$(TargetDir)"
-copy ..\..\Readme.txt Readme.txt
-copy ..\..\ChangeLog.txt ChangeLog.txt
-copy "..\..\Help\Release\YAML Serializer.chm" "YAML Serializer.chm"
-zip -9 -n zip $(ProjectName).zip Readme.txt ChangeLog.txt YamlSerializer.XML $(TargetFileName) "YAML Serializer.chm"
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

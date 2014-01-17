@@ -262,7 +262,7 @@ namespace System.Yaml
 
         class DoubleQuote: Parser<DoubleQuote.State>
         {
-            struct State { }
+            internal struct State { }
             Func<char, bool> nbDoubleSafeCharset = Charset(c =>
                 ( 0x100 <= c && c != '\u2028' && c != '\u2029' ) ||
                 c == 0x09 ||
