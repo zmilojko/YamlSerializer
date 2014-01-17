@@ -1,17 +1,34 @@
-﻿YamlSerializer 0.9.0.2 (2009-10-04)        Osamu TAKEUCHI <osamu@big.jp>
+# YamlSerializer 
 
-Description:
-	A library that serialize / deserialize C# native objects into YAML1.2 text.
+This is a YAML (de)serializer for .NET.
 
-Development environment: 
-	Visual C# 2008 Express Edition
-	Sandcastle (2008-05-29)
-	SandcastleBuilder 1.8.0.2
-	HTML Help workshop 4.74.8702
-	NUnit 2.5.0.9122
-	TestDriven.NET 2.0
+You can do something like this with it:
 
-Support web page: 
+        System.Yaml.Serialization.YamlSerializer ser = new System.Yaml.Serialization.YamlSerializer();
+        MySerializableClass obj = (MySerializableClass)ser.DeserializeFromFile(filepath, typeof(MySerializableClass))[0];
+
+and then something like this:
+
+        ser.SerializeToFile(filepath, obj);
+
+And of course, it can also serialize to and from strings. (Note that it can 
+serialize multiple objects from a same source, this the [0] in the end of the 
+first example.)
+
+## History
+
+Searching for a simple YAML serializer, I run into this deserted project,
+which was stored using Mercurial on CodePlex. It almost worked out of the box,
+but for the almost part I needed to make some changes.
+
+Not being too eager to start installing such dead tools as mercurial or 
+registering to even deader sites, decided to take only what I need and move
+it to Git and GitHub.
+
+Any kudos is due to the original author, Osamu Takeuchi.
+
+Original web page:
+
 	http://yamlserializer.codeplex.com/
 
 License:
@@ -19,7 +36,10 @@ License:
 
 ---
 The MIT License (MIT)
-Copyright (c) 2009 Osamu TAKEUCHI <osamu@big.jp>
+
+Changes: Copyright (c) 2013 Zeljko Milojkovic <zeljko@zwr.fi>
+
+Original code: Copyright (c) 2009 Osamu TAKEUCHI <osamu@big.jp>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in the 
