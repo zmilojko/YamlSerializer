@@ -258,7 +258,7 @@ namespace System.Yaml
         /// </summary>
         /// <remarks>
         /// <para>This recoveres <see cref="p"/>, <see cref="stringValue"/>, <see cref="state"/>
-        /// when <paramref name="condition"/> does not return <code>true</code>.</para>
+        /// when condition does not return <code>true</code>.</para>
         /// 
         /// <para>If any specific operation is needed for rewinding, in addition to simply
         /// recover the value of <see cref="state"/>, override <see cref="Rewind()"/>.</para>

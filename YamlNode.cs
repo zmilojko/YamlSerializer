@@ -1125,7 +1125,7 @@ namespace System.Yaml
             return DefaultParser.Parse(yaml, config).ToArray();
         }
         /// <summary>
-        /// Convert YAML text <paramref name="yaml"/> to a list of <see cref="YamlNode"/>.
+        /// Convert text from a stream to a list of <see cref="YamlNode"/>.
         /// </summary>
         /// <param name="s"><see cref="Stream"/> from which YAML document is read.</param>
         /// <returns>YAML nodes</returns>
@@ -1135,7 +1135,7 @@ namespace System.Yaml
                 return FromYaml(sr);
         }
         /// <summary>
-        /// Convert YAML text <paramref name="yaml"/> to a list of <see cref="YamlNode"/>.
+        /// Convert text from a stream to a list of <see cref="YamlNode"/>.
         /// </summary>
         /// <param name="s"><see cref="Stream"/> from which YAML document is read.</param>
         /// <returns>YAML nodes</returns>
@@ -1146,7 +1146,7 @@ namespace System.Yaml
                 return FromYaml(sr, config);
         }
         /// <summary>
-        /// Convert YAML text <paramref name="yaml"/> to a list of <see cref="YamlNode"/>.
+        /// Convert text from a TextReader to a list of <see cref="YamlNode"/>.
         /// </summary>
         /// <param name="tr"><see cref="TextReader"/> from which YAML document is read.</param>
         /// <returns>YAML nodes</returns>
@@ -1156,7 +1156,7 @@ namespace System.Yaml
             return FromYaml(yaml);
         }
         /// <summary>
-        /// Convert YAML text <paramref name="yaml"/> to a list of <see cref="YamlNode"/>.
+        /// Convert text from a TextReader to a list of <see cref="YamlNode"/>.
         /// </summary>
         /// <param name="tr"><see cref="TextReader"/> from which YAML document is read.</param>
         /// <returns>YAML nodes</returns>
@@ -1167,7 +1167,7 @@ namespace System.Yaml
             return FromYaml(yaml, config);
         }
         /// <summary>
-        /// Convert YAML text <paramref name="yaml"/> to a list of <see cref="YamlNode"/>.
+        /// Convert YAML text loaded from a file with a specified name to a list of <see cref="YamlNode"/>.
         /// </summary>
         /// <param name="FileName">YAML File Name</param>
         /// <returns>YAML nodes</returns>
@@ -1177,7 +1177,7 @@ namespace System.Yaml
                 return FromYaml(s);
         }
         /// <summary>
-        /// Convert YAML text <paramref name="yaml"/> to a list of <see cref="YamlNode"/>.
+        /// Convert YAML text loaded from a file with a specified name to a list of <see cref="YamlNode"/>.
         /// </summary>
         /// <param name="FileName">YAML File Name</param>
         /// <returns>YAML nodes</returns>

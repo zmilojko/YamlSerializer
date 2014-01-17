@@ -210,7 +210,7 @@ namespace System.Yaml
         }
 
         /// <summary>
-        /// Decode <paramref name="text"/> and returns actual value in C# object.
+        /// Decode a node and returns actual value in C# object.
         /// </summary>
         /// <param name="node">Node to be decoded.</param>
         /// <param name="obj">Decoded value.</param>
